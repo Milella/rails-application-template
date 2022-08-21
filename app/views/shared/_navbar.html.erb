@@ -1,0 +1,42 @@
+<!-----     NAVBAR SECTION (To call from Rails use render 'shared\shared'     ------------------------------>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+
+<!-----     NAVBAR BRAND SECTION     ----------------------------------------------------------------------->
+    <a class="navbar-brand" href="">
+      <%= image_tag("rails.png", title: "Rails", alt: "Rails", class: "nav-item", width: "75", height: "75") %>
+    </a>
+    <a href="/" class="txt-d-none"><span class="navbar-brand fs-2 fw-bold">S-TECH Rails Application Template</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!-----     END OF NAVBAR BRAND SECTION     ---------------------------------------------------------------->
+
+<!-----     NAVBAR ITEMS SECTION (This section gets toggled by the hamburger menu)     --------------------->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <%= link_to root_path, class: "nav-item" do %>
+          <% if current_user %>
+            <li class="nav-item h4">
+              <a href="#"><%= link_to current_user, edit_user_registration_path, class: "nav-link strong" %></a>
+            </li>
+            <li class="nav-item h4">
+              <a href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></a>
+            </li>
+          <% else %>
+            <li class="nav-item h4">
+              <a href="#"><%= link_to "Log in", new_user_session_path, class: "nav-link" %></a>
+            </li>
+            <li class="nav-item h4">
+              <a href="#"><%= link_to "Register", new_user_registration_path, class: "nav-link" %></a>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+<!-----    END OF NAVBAR ITEMS SECTION (This section gets toggled by the hamburger menu) -------------------->
+
+  </div>  <!-----     END OF CONTAINER DIV     -------------------------------------------------------------->
+</nav>  <!-----     END OF NAVBAR     ----------------------------------------------------------------------->

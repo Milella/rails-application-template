@@ -1,0 +1,23 @@
+/*.shared .ul .li {*/
+/*    text-decoration: none;*/
+/*}*/
+
+.nav-link {
+    color: white !important;
+    font-weight: bolder;
+    margin: 0 30px 0 30px;
+}
+
+.nav-link:hover {
+    color: lightgray !important;
+    font-weight: bolder;
+    transform: scale(1.25);
+}
+
+/*.shared-brand {*/
+/*    font-weight: bold;*/
+/*}*/
+
+.txt-d-none {
+    text-decoration: none !important;
+}
