@@ -1,0 +1,15 @@
+//Added 8/22/2022 So there is a Flash :ALERT class that will not fade away
+.st-alert:not(:empty) {
+  @extend .alert !optional;
+  @extend .alert-danger !optional;
+}
+
+//Added 8/22/2022 So there is a Flash :WARNING class that will not fade away
+.st-warning:not(:empty) {
+  @extend .alert !optional;
+  @extend .alert-warning !optional;
+}
+
+.st-notice:not(:empty) {
+  @extend .notice !optional;
+}

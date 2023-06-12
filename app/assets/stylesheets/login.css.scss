@@ -1,0 +1,43 @@
+
+.login-box {
+  background-color: lightgray;
+  border-radius: 10px;
+  border-width: 5px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, .25);
+  padding: 50px;
+  margin: auto;
+  display: block;
+  width: 450px;
+}
+
+.form-group {
+  position: relative;
+}
+
+//.login-icon {
+//    width: 48px;
+//    height: 48px;
+//    background: #a0c334;
+//    font-size: 20px;
+//    border-radius: 5px 0 0 5px;
+//}
+
+.login-icon {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: grey;
+  font-size: 20px;
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+}
+.login-field {
+  text-indent: 40px;
+}
+
+.login-field::placeholder {
+  text-indent: 40px;
+}
+
+.login-link {
+}

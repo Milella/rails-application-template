@@ -63,6 +63,15 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Suppress logger output for asset requests.
+  config.assets.quiet = false
+
+  # ADDED v0.004 9/1/2021 Scott Milella
+  config.assets.check_precompiled_asset = false
+
+  # Do not compress assets
+  config.assets.compress = false
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
@@ -87,7 +96,7 @@ Rails.application.configure do
   config.action_mailer.asset_host = 'http://localhost:3000/'
   config.action_controller.asset_host = 'http://localhost:3000/'
 
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true

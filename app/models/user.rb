@@ -28,9 +28,9 @@
 #
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, and :omniauthable
+  # :lockable, :timeoutable, and
   devise :confirmable, :database_authenticatable, :recoverable, :registerable,
-         :rememberable, :trackable, :validatable
+         :rememberable, :trackable, :validatable, :omniauthable
 
   def to_s
     email

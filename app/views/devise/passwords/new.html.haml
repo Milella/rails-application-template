@@ -1,0 +1,19 @@
+%h2 Forgot your password?
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  .field
+    = f.label :email
+    %br
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+  .actions
+    = f.submit "Send me reset password instructions"
+  = render "devise/shared/links"
+  %br
+  = flash[:recaptcha_error]
+
+  - if @show_checkbox_recaptcha
+    %br
+    %br
+    = recaptcha_tags(site_key: ENV['RECAPTCHA_SITE_KEY_V2'])
+  - else
+    = recaptcha_v3(action: 'password', turbolinks: true , minimum_score: 0.75)#, site_key: ENV['RECAPTCHA_SITE_KEY_V3'])
